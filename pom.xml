@@ -11,7 +11,7 @@
         <tag>HEAD</tag>
     </scm>
     <properties>
-        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-release-plugin.version>3.0.0-M1</maven-release-plugin.version>
     </properties>
     <build>
         <plugins>
