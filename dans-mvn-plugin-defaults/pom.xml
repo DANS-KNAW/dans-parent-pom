@@ -177,6 +177,7 @@
                     </executions>
                     <configuration>
                         <scalaCompatVersion>${scala.binary.version}</scalaCompatVersion>
+                        <scalaVersion>${scala.version}</scalaVersion>
                         <args>
                             <arg>-target:jvm-1.8</arg>
                             <arg>-deprecation</arg>
