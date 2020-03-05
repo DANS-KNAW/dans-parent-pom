@@ -70,6 +70,7 @@
 
         <!-- HTTP server support -->
         <jetty.version>9.4.18.v20190429</jetty.version>
+        <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
         <scalatra.version>2.7.0-RC1</scalatra.version>
         <guava.version>28.2-jre</guava.version>
 
@@ -92,7 +93,8 @@
         <easymock.version>4.2</easymock.version>
         <powermock.version>2.0.5</powermock.version>
         <hamcrest.version>1.3</hamcrest.version>
-        <scala-test.version>3.0.8</scala-test.version>
+        <!-- Do not update untill this issue is resolved: https://github.com/scalatest/scalatest/issues/1734 -->
+        <scala-test.version>3.0.8</scala-test.version> 
         <scalamock.version>4.4.0</scalamock.version>
         <scalacheck.version>1.14.3</scalacheck.version>
         <cats-scalatest.version>3.0.5</cats-scalatest.version>
@@ -266,6 +268,11 @@
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-servlet</artifactId>
                 <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax-servlet-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.scalaj</groupId>
