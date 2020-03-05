@@ -877,6 +877,8 @@
                         <exclude>node_modules/</exclude>
                         <exclude>site/</exclude>
                         <exclude>**/pom.xml.versionsBackup</exclude>
+                        <exclude>requirements.txt</exclude>
+                        <exclude>.travis/</exclude>
                     </excludes>
                 </configuration>
                 <executions>
