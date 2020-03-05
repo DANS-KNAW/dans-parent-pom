@@ -42,11 +42,11 @@
         <scala.version>2.12.10</scala.version>
         <scala.binary.version>2.12</scala.binary.version>
         <scala-maven-plugin.version>4.3.1</scala-maven-plugin.version>
-        <kind-projector-compiler-plugin.version>0.9.9</kind-projector-compiler-plugin.version>
+        <kind-projector-compiler-plugin.version>0.11.0</kind-projector-compiler-plugin.version>
         <scalatest-maven-plugin.version>2.0.0</scalatest-maven-plugin.version>
 
         <!-- Building binaries and source packages -->
-        <maven-compiler-plugin.version>3.8.1-jboss-1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <java.version>1.6</java.version><!-- Still using Java 1.6 as default, for legacy projects -->
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
@@ -177,7 +177,6 @@
                     </executions>
                     <configuration>
                         <scalaCompatVersion>${scala.binary.version}</scalaCompatVersion>
-                        <scalaVersion>${scala.version}</scalaVersion>
                         <args>
                             <arg>-target:jvm-1.8</arg>
                             <arg>-deprecation</arg>
@@ -185,8 +184,8 @@
                         </args>
                         <compilerPlugins>
                             <compilerPlugin>
-                                <groupId>org.spire-math</groupId>
-                                <artifactId>kind-projector_2.12</artifactId>
+                                <groupId>org.typelevel</groupId>
+                                <artifactId>kind-projector_2.12.10</artifactId>
                                 <version>${kind-projector-compiler-plugin.version}</version>
                             </compilerPlugin>
                         </compilerPlugins>
