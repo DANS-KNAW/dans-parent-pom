@@ -42,7 +42,7 @@
         <scala-xml.version>2.0.0-M1</scala-xml.version>
         <scalaj-http.version>2.4.2</scalaj-http.version>
         <scala-arm.version>2.0</scala-arm.version>
-        <dans-scala-lib.version>1.6.2-SNAPSHOT</dans-scala-lib.version>
+        <dans-scala-lib.version>1.6.2</dans-scala-lib.version>
         <better-files.version>3.8.0</better-files.version>
         <cats-core.version>2.1.1</cats-core.version>
 
@@ -88,7 +88,7 @@
         <jgit.version>5.6.1.202002131546-r</jgit.version>
         <json4s.version>3.7.0-M2</json4s.version>
         <tika.version>1.23</tika.version>
-        <dans-bag-lib.version>1.0.0-SNAPSHOT</dans-bag-lib.version>
+        <dans-bag-lib.version>1.0.0</dans-bag-lib.version>
         <jaxen.version>1.2.0</jaxen.version>
 
         <!-- Unit testing -->
