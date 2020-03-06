@@ -73,12 +73,14 @@
         <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
         <scalatra.version>2.7.0-RC1</scalatra.version>
         <guava.version>28.2-jre</guava.version>
+        <velocity.version>1.7</velocity.version>
 
         <!-- Database connectivity -->
         <postgresql.version>42.2.10.jre7</postgresql.version>
         <sqlite.version>3.30.1</sqlite.version>
         <hsqldb.version>2.5.0</hsqldb.version>
         <hibernate.version>6.0.0.Alpha4</hibernate.version>
+        <solr4j.version>6.6.0</solr4j.version>
 
         <!-- Formats -->
         <bagit.version>5.2.0</bagit.version>
@@ -87,12 +89,14 @@
         <json4s.version>3.7.0-M2</json4s.version>
         <tika.version>1.23</tika.version>
         <dans-bag-lib.version>1.0.0-SNAPSHOT</dans-bag-lib.version>
+        <jaxen.version>1.2.0</jaxen.version>
 
         <!-- Unit testing -->
         <junit.version>4.13</junit.version>
         <junit-addons.version>1.4</junit-addons.version>
         <easymock.version>4.2</easymock.version>
         <powermock.version>2.0.5</powermock.version>
+        <mockwebserver.version>4.4.0</mockwebserver.version>
         <hamcrest.version>1.3</hamcrest.version>
         <!-- Do not update untill this issue is resolved: https://github.com/scalatest/scalatest/issues/1734 -->
         <scala-test.version>3.0.8</scala-test.version> 
@@ -165,6 +169,11 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jul-to-slf4j</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
             <dependency>
@@ -300,6 +309,11 @@
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
 
             <!-- Database connectivity -->
             <dependency>
@@ -321,6 +335,11 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-solrj</artifactId>
+                <version>${solr4j.version}</version>
             </dependency>
 
             <!-- Formats -->
@@ -359,6 +378,11 @@
                 <artifactId>dans-bag-lib_2.12</artifactId>
                 <version>${dans-bag-lib.version}</version>
             </dependency>
+            <dependency>
+                <groupId>jaxen</groupId>
+                <artifactId>jaxen</artifactId>
+                <version>${jaxen.version}</version>
+            </dependency>
 
             <!-- Unit testing -->
             <dependency>
@@ -384,6 +408,11 @@
                 <artifactId>powermock-module-junit4-rule</artifactId>
                 <version>${powermock.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>mockwebserver</artifactId>
+                <version>${mockwebserver.version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
