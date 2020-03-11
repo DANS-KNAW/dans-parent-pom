@@ -172,7 +172,7 @@ It can happen that a dependency is included in one of the parent POMs, that also
 2. In the parent POM, change the version number for the dependency to the next (not yet deployed) release version.
 3. Build and deploy `dans-parent-pom`.
 4. In the dependency's POM, change the parent POM version number to the newly deployed version of `dans-parent-pom`.
-5. Build and deploy the dependency.
+5. Build and deploy the inheriting project.
 
 BUILDING FROM SOURCE
 --------------------
