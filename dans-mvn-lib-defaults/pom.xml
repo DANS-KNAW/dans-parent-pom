@@ -76,27 +76,27 @@
         <velocity.version>1.7</velocity.version>
 
         <!-- Database connectivity -->
-        <postgresql.version>42.2.10.jre7</postgresql.version>
+        <postgresql.version>42.2.11.jre7</postgresql.version>
         <sqlite.version>3.30.1</sqlite.version>
         <hsqldb.version>2.5.0</hsqldb.version>
         <hibernate.version>5.4.12.Final</hibernate.version>
-        <solr4j.version>6.6.0</solr4j.version>
+        <solr4j.version>8.4.1</solr4j.version>
 
         <!-- Formats -->
         <bagit.version>5.2.0</bagit.version>
-        <zip4j.version>2.4.0</zip4j.version>
+        <zip4j.version>2.5.0</zip4j.version>
         <jgit.version>5.7.0.202003090808-r</jgit.version>
-        <json4s.version>3.6.7</json4s.version>
+        <json4s.version>3.7.0-M2</json4s.version>
         <tika.version>1.23</tika.version>
         <dans-bag-lib.version>1.0.0</dans-bag-lib.version>
-        <jaxen.version>1.2.0</jaxen.version>
+        <jaxen.version>1.2.0-atlassian-2</jaxen.version>
 
         <!-- Unit testing -->
         <junit.version>4.13</junit.version>
         <junit-addons.version>1.4</junit-addons.version>
         <easymock.version>4.2</easymock.version>
         <powermock.version>2.0.5</powermock.version>
-        <mockwebserver.version>4.4.0</mockwebserver.version>
+        <mockwebserver.version>4.4.1</mockwebserver.version>
         <hamcrest.version>1.3</hamcrest.version>
         <!-- Do not update untill this issue is resolved: https://github.com/scalatest/scalatest/issues/1734 -->
         <scala-test.version>3.0.8</scala-test.version> 
