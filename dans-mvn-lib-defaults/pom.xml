@@ -39,16 +39,16 @@
         <!-- Scala -->
         <scallop.version>3.4.0</scallop.version>
         <scalarx.version>0.27.0</scalarx.version>
-        <scala-xml.version>2.0.0-M1</scala-xml.version>
+        <scala-xml.version>1.2.0</scala-xml.version>
         <scalaj-http.version>2.4.2</scalaj-http.version>
         <scala-arm.version>2.0</scala-arm.version>
         <dans-scala-lib.version>1.6.3</dans-scala-lib.version>
         <better-files.version>3.8.0</better-files.version>
-        <cats-core.version>2.2.0-M1</cats-core.version>
+        <cats-core.version>2.1.1</cats-core.version>
 
         <!-- Logging -->
-        <logback.version>1.3.0-alpha5</logback.version>
-        <slf4j.version>2.0.0-alpha1</slf4j.version>
+        <logback.version>1.2.3</logback.version>
+        <slf4j.version>1.7.30</slf4j.version>
         <scala-logging.version>3.9.2</scala-logging.version>
         <sourcecode.version>0.2.1</sourcecode.version>
         <logback-journal.version>0.3.0</logback-journal.version>
