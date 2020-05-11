@@ -182,6 +182,7 @@
                             <arg>-target:jvm-1.8</arg>
                             <arg>-deprecation</arg>
                             <arg>-feature</arg>
+                            <arg>-Ypartial-unification</arg>
                         </args>
                         <compilerPlugins>
                             <compilerPlugin>
