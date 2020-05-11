@@ -83,7 +83,7 @@
         <solr4j.version>8.5.1</solr4j.version>
 
         <!-- Formats -->
-        <bagit.version>5.2.0</bagit.version>
+        <bagit.version>5.4.0</bagit.version>
         <zip4j.version>2.5.2</zip4j.version>
         <jgit.version>5.7.0.202003110725-r</jgit.version>
         <dans-bag-lib.version>1.0.1</dans-bag-lib.version>
@@ -344,7 +344,7 @@
 
             <!-- Formats -->
             <dependency>
-                <groupId>gov.loc</groupId>
+                <groupId>nl.knaw.dans</groupId>
                 <artifactId>bagit</artifactId>
                 <version>${bagit.version}</version>
             </dependency>
