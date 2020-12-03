@@ -167,11 +167,11 @@
                     <version>${scala-maven-plugin.version}</version>
                     <executions>
                         <execution>
+                            <id>build</id>
                             <goals>
                                 <goal>compile</goal>
                                 <goal>testCompile</goal>
                                 <goal>add-source</goal>
-                                <goal>doc-jar</goal>
                             </goals>
                         </execution>
                     </executions>
