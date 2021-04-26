@@ -54,7 +54,7 @@
         <logback-journal.version>0.3.0</logback-journal.version>
 
         <!-- Apache Commons -->
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <commons-codec.version>1.14</commons-codec.version>
         <commons-lang.version>2.6</commons-lang.version>
         <commons-configuration.version>1.10</commons-configuration.version>
