@@ -69,7 +69,7 @@
         <joda-convert.version>2.2.1</joda-convert.version>
 
         <!-- HTTP server support -->
-        <jetty.version>9.4.18.v20190429</jetty.version>
+        <jetty.version>9.4.38.v20210224</jetty.version>
         <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
         <scalatra.version>2.7.0</scalatra.version>
         <guava.version>29.0-jre</guava.version>
