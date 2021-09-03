@@ -151,6 +151,9 @@
                                 <classpathPrefix>../lib/</classpathPrefix>
                                 <mainClass>${main-class}</mainClass>
                             </manifest>
+                            <manifestEntries>
+                                <Implementation-Version>${project.version}</Implementation-Version>
+                            </manifestEntries>
                         </archive>
                     </configuration>
                 </plugin>
@@ -356,9 +359,9 @@
                                     <source>
                                         <location>${project.build.directory}/${project.artifactId}-${project.version}.jar</location>
                                     </source>
-                                    <source>
-                                        <location>${project.build.directory}/version/version</location>
-                                    </source>
+<!--                                    <source>-->
+<!--                                        <location>${project.build.directory}/version/version</location>-->
+<!--                                    </source>-->
                                 </sources>
                             </mapping>
                             <!-- Executable contents of ${app.home}/bin -->
