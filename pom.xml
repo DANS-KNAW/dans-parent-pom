@@ -40,5 +40,6 @@
         <module>dans-scala-project</module>
         <module>dans-scala-app-project</module>
         <module>dans-java-project</module>
+        <module>dans-dropwizard-project</module>
     </modules>
 </project>

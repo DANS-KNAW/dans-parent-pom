@@ -151,6 +151,9 @@
                                 <classpathPrefix>../lib/</classpathPrefix>
                                 <mainClass>${main-class}</mainClass>
                             </manifest>
+                            <manifestEntries>
+                                <Implementation-Version>${project.version}</Implementation-Version>
+                            </manifestEntries>
                         </archive>
                     </configuration>
                 </plugin>
@@ -854,6 +857,7 @@
                         <exclude>**/*.sc</exclude>
                         <exclude>**/*.graphml</exclude>
                         <exclude>home/</exclude>
+                        <exclude>etc/</exclude>
                         <exclude>out/</exclude>
                         <exclude>data/</exclude>
                         <exclude>data-*/</exclude>

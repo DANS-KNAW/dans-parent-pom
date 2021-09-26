@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2018 DANS - Data Archiving and Networked Services (info@dans.knaw.nl)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>nl.knaw.dans.shared</groupId>
+        <artifactId>dans-mvn-lib-defaults</artifactId>
+        <version>6.1.2-SNAPSHOT</version>
+        <relativePath>../dans-mvn-lib-defaults</relativePath>
+    </parent>
+
+    <artifactId>dans-dropwizard-project</artifactId>
+    <version>6.1.2-SNAPSHOT</version>
+    <name>DANS DropWizard Project</name>
+    <description>
+        A DropWizard based project
+    </description>
+    <packaging>pom</packaging>
+    <scm>
+        <developerConnection>scm:git:https://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <dependencies>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/assembly/dist/bin</directory>
+                <targetPath>${project.build.directory}/version</targetPath>
+                <includes>
+                    <include>version</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <!-- Creates dynamic properties and resources -->
+                <artifactId>maven-antrun-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <!-- To support alternative deploy for RPMs -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-rpm</id>
+                        <goals>
+                            <goal>attached-rpm</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration combine.children="override">
+                    <group>Applications/Archiving</group>
+                    <release>${rpm-release}</release>
+                    <vendor>${dans-provider-name}</vendor>
+                    <packager>${dans-provider-name}</packager>
+                    <name>${dans-provider-name}-${project.artifactId}</name>
+                    <defaultUsername>root</defaultUsername>
+                    <defaultGroupname>root</defaultGroupname>
+                    <license>Apache 2.0</license>
+                    <targetOS>Linux</targetOS>
+                    <defaultFilemode>744</defaultFilemode>
+                    <defaultDirmode>755</defaultDirmode>
+                    <mappings combine.self="override">
+                        <!-- Contents of ${app.home}/lib -->
+                        <mapping>
+                            <directory>/opt/${dans-provider-name}/${project.artifactId}/lib</directory>
+                            <dependency>
+                                <stripVersion>false</stripVersion>
+                            </dependency>
+                        </mapping>
+                        <!-- Read-only contents of ${app.home}/bin  -->
+                        <mapping>
+                            <directory>/opt/${dans-provider-name}/${project.artifactId}/bin</directory>
+                            <sources>
+                                <source>
+                                    <location>src/main/assembly/dist/bin</location>
+                                    <excludes>
+                                        <!-- This is the executable, so exclude here -->
+                                        <exclude>${project.artifactId}-${project.version}</exclude>
+                                    </excludes>
+                                </source>
+                                <source>
+                                    <location>${project.build.directory}/${project.artifactId}-${project.version}.jar</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <!-- Executable contents of ${app.home}/bin -->
+                        <mapping>
+                            <directory>/opt/${dans-provider-name}/${project.artifactId}/bin</directory>
+                            <filemode>755</filemode>
+                            <sources>
+                                <source>
+                                    <location>src/main/assembly/dist/bin/${project.artifactId}</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <!-- Contents of cfg dir under /etc/opt ... -->
+                        <mapping>
+                            <directory>/etc/opt/${dans-provider-name}/${project.artifactId}</directory>
+                            <configuration>${rpm-replace-configuration}</configuration>
+                            <sources>
+                                <source>
+                                    <location>src/main/assembly/dist/cfg</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <!-- Contents of ${app.home}/* (except cfg,bin) -->
+                        <mapping>
+                            <directory>/opt/${dans-provider-name}/${project.artifactId}</directory>
+                            <sources>
+                                <source>
+                                    <location>src/main/assembly/dist</location>
+                                    <excludes>
+                                        <exclude>bin/*</exclude>
+                                        <exclude>cfg/*</exclude>
+                                    </excludes>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <!-- Symlink to executable, to put it on the PATH -->
+                        <mapping>
+                            <directory>/opt/bin</directory>
+                            <sources>
+                                <softlinkSource>
+                                    <location>/opt/${dans-provider-name}/${project.artifactId}/bin/${project.artifactId}</location>
+                                </softlinkSource>
+                            </sources>
+                        </mapping>
+                        <!-- Symlink jar to version-less location -->
+                        <mapping>
+                            <directory>/opt/${dans-provider-name}/${project.artifactId}/bin/</directory>
+                            <sources>
+                                <softlinkSource>
+                                    <destination>${project.artifactId}.jar</destination>
+                                    <location>/opt/${dans-provider-name}/${project.artifactId}/bin/${project.artifactId}-${project.version}.jar</location>
+                                </softlinkSource>
+                            </sources>
+                        </mapping>
+                    </mappings>
+                </configuration>
+            </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <profiles>
+        <profile>
+            <id>java11+</id>
+            <activation>
+                <jdk>[11,)</jdk>
+            </activation>
+            <properties>
+                <!--
+                Workaround for "javadoc: error - The code being documented uses modules but the packages
+                defined in https://docs.oracle.com/javase/8/docs/api/ are in the unnamed module."
+                -->
+                <maven.javadoc.skip>true</maven.javadoc.skip>
+            </properties>
+        </profile>
+    </profiles>
+</project>

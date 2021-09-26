@@ -37,7 +37,7 @@
         <timestamp>${maven.build.timestamp}</timestamp>
 
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-        <license-maven-plugin.version>3.0</license-maven-plugin.version>
+        <license-maven-plugin.version>4.1</license-maven-plugin.version>
 
         <!-- Releasing to the DANS Maven repository -->
         <maven-release-plugin.version>3.0.0-M1</maven-release-plugin.version>
