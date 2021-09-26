@@ -359,9 +359,9 @@
                                     <source>
                                         <location>${project.build.directory}/${project.artifactId}-${project.version}.jar</location>
                                     </source>
-<!--                                    <source>-->
-<!--                                        <location>${project.build.directory}/version/version</location>-->
-<!--                                    </source>-->
+                                    <source>
+                                        <location>${project.build.directory}/version/version</location>
+                                    </source>
                                 </sources>
                             </mapping>
                             <!-- Executable contents of ${app.home}/bin -->
@@ -857,6 +857,7 @@
                         <exclude>**/*.sc</exclude>
                         <exclude>**/*.graphml</exclude>
                         <exclude>home/</exclude>
+                        <exclude>etc/</exclude>
                         <exclude>out/</exclude>
                         <exclude>data/</exclude>
                         <exclude>data-*/</exclude>
