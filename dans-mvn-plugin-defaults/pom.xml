@@ -523,7 +523,7 @@
                                 <goal>exec</goal>
                             </goals>
                             <configuration>
-                                <executable>python</executable>
+                                <executable>python3</executable>
                                 <workingDirectory>${project.basedir}</workingDirectory>
                                 <arguments>
                                     <argument>${project.build.directory}/dans-build-resources/script/deploy-rpm.py</argument>
