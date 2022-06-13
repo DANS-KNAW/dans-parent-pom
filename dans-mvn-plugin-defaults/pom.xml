@@ -881,6 +881,7 @@
                         <exclude>**/pom.xml.versionsBackup</exclude>
                         <exclude>requirements.txt</exclude>
                         <exclude>.travis/</exclude>
+                        <exclude>venv/</exclude>
                     </excludes>
                 </configuration>
                 <executions>
