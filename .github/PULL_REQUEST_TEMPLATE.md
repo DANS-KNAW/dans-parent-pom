@@ -1,15 +1,15 @@
-Fixes issue 
+Fixes DD-
 
-#### When applied it will
-* 
-* 
-* 
+# Description of changes
 
-#### Where should the reviewer @DANS-KNAW/all-developers start?
+# How to test
 
-#### How should this be manually tested?
+# Related PRs
 
-#### related pull requests on github
-repo                       | PR
--------------------------- | -----------------
-[module-name]              | [PR#](PRlink) 
+(Add links)
+
+*
+
+# Notify
+
+@DANS-KNAW/dataversedans
