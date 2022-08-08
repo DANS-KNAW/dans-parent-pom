@@ -36,7 +36,7 @@
         <tag>HEAD</tag>
     </scm>
     <properties>
-        <dropwizard.version>2.0.24</dropwizard.version>
+        <dropwizard.version>2.1.1</dropwizard.version>
 
         <!-- Scala -->
         <scallop.version>3.4.0</scallop.version>
