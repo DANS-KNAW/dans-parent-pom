@@ -81,7 +81,7 @@
         <postgresql.version>42.2.12.jre7</postgresql.version>
         <sqlite.version>3.31.1</sqlite.version>
         <hsqldb.version>2.5.0</hsqldb.version>
-        <hibernate.version>5.4.14.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <solr4j.version>8.5.1</solr4j.version>
 
         <!-- Formats -->
