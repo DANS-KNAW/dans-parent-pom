@@ -107,7 +107,7 @@
         <cats-scalatest.version>3.0.5</cats-scalatest.version>
 
         <!-- LEGACY -->
-        <spring.version>5.2.6.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
         <yourmediashelf.version>0.7</yourmediashelf.version>
         <!--
             According to mvnrepository.com the eclipse branch of jetty is the "current" one.
