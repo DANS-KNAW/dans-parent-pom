@@ -4,7 +4,7 @@
     <groupId>nl.knaw.dans.shared</groupId>
     <artifactId>dans-parent-pom</artifactId>
     <name>DANS Maven Parents Master Build</name>
-    <version>7.2.1-SNAPSHOT</version>
+    <version>7.3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <scm>
         <developerConnection>scm:git:https://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
