@@ -46,7 +46,7 @@
         <slf4j.version>1.7.30</slf4j.version>
 
         <!-- Database -->
-        <postgresql.version>42.2.12.jre7</postgresql.version>
+        <postgresql.version>42.3.3</postgresql.version>
         <hsqldb.version>2.5.0</hsqldb.version>
         <solr4j.version>8.5.1</solr4j.version>
 
