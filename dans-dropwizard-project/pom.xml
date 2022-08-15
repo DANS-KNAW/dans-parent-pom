@@ -22,12 +22,12 @@
     <parent>
         <groupId>nl.knaw.dans.shared</groupId>
         <artifactId>dans-mvn-plugin-defaults</artifactId>
-        <version>7.4.0</version>
+        <version>7.4.1-SNAPSHOT</version>
         <relativePath>../dans-mvn-plugin-defaults</relativePath>
     </parent>
 
     <artifactId>dans-dropwizard-project</artifactId>
-    <version>7.4.0</version>
+    <version>7.4.1-SNAPSHOT</version>
     <name>DANS DropWizard Project</name>
     <description>
         A DropWizard based project
@@ -35,7 +35,7 @@
     <packaging>pom</packaging>
     <scm>
         <developerConnection>scm:git:https://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
-        <tag>v7.4.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
