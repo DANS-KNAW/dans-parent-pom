@@ -36,6 +36,8 @@
         <tag>HEAD</tag>
     </scm>
     <properties>
+        <dropwizard.version>2.1.1</dropwizard.version>
+
         <!-- Scala -->
         <scallop.version>3.4.0</scallop.version>
         <scalarx.version>0.27.0</scalarx.version>
@@ -118,6 +120,13 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-dependencies</artifactId>
+                <version>${dropwizard.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!-- Scala -->
             <dependency>
                 <groupId>org.scala-lang</groupId>
