@@ -22,12 +22,12 @@
     <parent>
         <groupId>nl.knaw.dans.shared</groupId>
         <artifactId>dans-java11-project</artifactId>
-        <version>9.1.1-SNAPSHOT</version>
+        <version>9.2.0-SNAPSHOT</version>
         <relativePath>../dans-java11-project</relativePath>
     </parent>
 
     <artifactId>dans-dropwizard-project</artifactId>
-    <version>9.1.1-SNAPSHOT</version>
+    <version>9.2.0-SNAPSHOT</version>
     <name>DANS DropWizard Project</name>
     <description>
         A DropWizard based project
